@@ -1,3 +1,76 @@
-.test{
-    color:red;
+.containerImage{
+    background-image: url('../images/2244.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative;
+}
+
+.backgroundOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/2244.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    filter: brightness(0.7); 
+}
+
+.infoImage{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.button-grey{
+    background-color: #3C3D3E;
+    padding: 7px;
+    border-radius: 50px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: white;
+    width: 150px;
+}
+
+.button-blue{
+    background-color: #133554;
+    padding: 7px;
+    border-radius: 50px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: white;
+    width: 190px;
+}
+
+.font-title{
+    font-size: 65px;
+    color: white;
+    margin-right: 80px;
+    margin-top: -100px;
+}
+
+.para-text{
+    margin-right: 410px;
+    margin-top: 150px;
+    color: white;
+}
+@media(max-width: 850px){
+    .para-text{
+        margin-right: 0px;
+        margin-top: 150px;
+        color: white;
+        text-align: center;
+    }
+    .font-title{
+        font-size: 35px;
+        color: white;
+        text-align: center;
+    }
+}
+.buttons-rigth{
+    margin-right: 330px;
 }
