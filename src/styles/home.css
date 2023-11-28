@@ -58,6 +58,9 @@
     margin-top: 150px;
     color: white;
 }
+.buttons-rigth{
+    margin-right: 330px;
+}
 @media(max-width: 850px){
     .para-text{
         margin-right: 0px;
@@ -69,8 +72,13 @@
         font-size: 35px;
         color: white;
         text-align: center;
+        margin-right: 0px;
     }
-}
-.buttons-rigth{
-    margin-right: 330px;
+    .button-blue{
+        display: none;
+    }
+    .buttons-rigth {
+        text-align: center;
+        margin-right: 0px;
+    }
 }
