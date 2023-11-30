@@ -8,41 +8,48 @@
     color: #3C3D3E;
 }
 
-.carousel-container {
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .cards-container {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-  }
-  
-  .card {
-    min-width: 280px; 
-    /* flex: 0 0 30%;  */
-    transition: transform 0.5s ease; /* Add a smooth transition effect */
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    background-color: #3C3D3E;
-    border-radius: 30px;
-    height: 300px;
-  }
+.container-services {
+  height: auto; /* Change this to auto if you don't need a fixed height */
+}
 
-  .prew{
-    background-color: #3C3D3E;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+.titleServices {
+  font-size: 40px;
+  color: #3c3d3e;
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.cards-wrapper {
+  display: flex;
+  animation: cardAnimation 20s linear infinite; /* Adjust the animation duration as needed */
+  white-space: nowrap; /* Prevent cards from wrapping to the next line */
+}
+.cards-wrapper:hover {
+  animation-play-state: paused; /* Pause the animation when hovering the container */
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 250px; /* Adjust the card width as needed */
+  margin-right: 16px; /* Adjust the margin between cards as needed */
+  padding: 16px; /* Adjust the padding within the cards as needed */
+  background-color: #3c3d3e; /* Set the background color as needed */
+  height: 300px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+.card:hover{
+  transition: transform 0.3s ease, width 0.3s ease; /* Add transition for smooth animation */
+}
+
+@keyframes cardAnimation {
+  0% {
+    transform: translateX(0);
   }
-  
-  .active {
-    background-color: #ddd; /* Highlight the active card */
+  100% {
+    transform: translateX(calc(-200px * 6 - 16px * 5)); /* Adjust the card width and margin */
   }
-  
+}
