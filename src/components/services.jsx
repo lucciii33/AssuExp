@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import "../styles/services.css";
 
 function Services() {
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    const scroll = () => {
+      container.scrollLeft += 2;
+      if (container.scrollLeft >= container.scrollWidth / 2) {
+        container.scrollLeft = 0;
+      }
+    };
+
+    const intervalId = setInterval(scroll, 50); // Adjust the interval as needed
+
+    return () => clearInterval(intervalId);
+  }, []);
+
 
   const cardData = [
     { id: 1, text: 'Card 1 Content' },
@@ -13,7 +31,7 @@ function Services() {
     { id: 6, text: 'Card 6 Content' },
   ];
 
- const duplicated = [...cardData, ...cardData, ...cardData]
+ const duplicated = [...cardData, ...cardData, ...cardData, ...cardData]
 
   return (
     <>
@@ -25,7 +43,7 @@ function Services() {
         </div>
 
 
-        <div className="carousel-container pb-20 mt-10">
+        <div className="carousel-container mt-20" ref={containerRef}>
       <div className="cards-wrapper">
         {duplicated.map((card) => (
           <div key={card.id} className="card">

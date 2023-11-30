@@ -9,7 +9,7 @@
 }
 
 .container-services {
-  height: auto; /* Change this to auto if you don't need a fixed height */
+  height: auto;
 }
 
 .titleServices {
@@ -20,15 +20,15 @@
 .carousel-container {
   overflow: hidden;
   position: relative;
+  margin-bottom: 8rem;
 }
 
 .cards-wrapper {
   display: flex;
-  animation: cardAnimation 20s linear infinite; /* Adjust the animation duration as needed */
-  white-space: nowrap; /* Prevent cards from wrapping to the next line */
-}
+  /* animation: cardAnimation 20s linear infinite;  */
+  white-space: nowrap; /* Prevent cards from wrapping to the next line */}
 .cards-wrapper:hover {
-  animation-play-state: paused; /* Pause the animation when hovering the container */
+  animation-play-state: paused;
 }
 
 .card {
@@ -39,10 +39,10 @@
   background-color: #3c3d3e; /* Set the background color as needed */
   height: 300px;
   border-radius: 20px;
-  transition: transform 0.3s ease, width 0.3s ease;
+  /* transition: transform 0.3s ease, width 0.3s ease; */
 }
-.card:hover{
-  transition: transform 0.3s ease, width 0.3s ease; /* Add transition for smooth animation */
+/* .card:hover{
+  transition: transform 0.3s ease, width 0.3s ease; 
 }
 
 @keyframes cardAnimation {
@@ -50,6 +50,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-200px * 6 - 16px * 5)); /* Adjust the card width and margin */
+    transform: translateX(calc(-200px * 6 - 16px * 5)); 
   }
-}
+}  */
