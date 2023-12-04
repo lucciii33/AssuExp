@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 export const LastBanner = () => {
+	const form = useRef()
+
 	const [data, setData] = useState({
 		name: '',
 		email: '',
@@ -13,17 +16,43 @@ export const LastBanner = () => {
 		setData({ ...data, [name]: value })
 	}
 
-	const handleSubmit = () => {
-		// Submit function
+	const handleSubmit = (e) => {
+		e.preventDefault()
+
+		emailjs
+			.sendForm(
+				'service_38t9aii', // Service ID
+				'template_3fwwhcr', // Template ID
+				form.current,
+				'edbbWgFYQF60xVjKt' //Public API_KEY
+			)
+			.then(() => {
+				console.log('hola')
+				setData({
+					name: '',
+					email: '',
+					telephone: '',
+					message: '',
+				})
+			})
+		// .then(
+		// 	(result) => {
+		// 		console.log(result.text)
+		// 	},
+		// 	(error) => {
+		// 		console.log(error.text)
+		// 	}
+		// )
 	}
 
 	return (
 		<div className="containerImage xl:flex xl:flex-col-reverse ">
 			<div className="backgroundOverlay"></div>
-			<div className="min-w-[350px] max-w-[1620px] min-h-screen p-20 xl:p-0 xl:pl-28 flex flex-col sm:flex-col xl:flex-row-reverse gap-20 2xl:gap-[40%] ">
+			<div className="min-w-[350px] max-w-[1620px] min-h-screen p-20 xl:p-0 xl:pl-28 flex flex-col-reverse sm:flex-col-reverse xl:flex-row-reverse gap-20 2xl:gap-[40%] ">
 				{/* Form */}
 				<form
 					className="flex flex-col justify-center items-center gap-5 w-full z-10"
+					ref={form}
 					onSubmit={handleSubmit}
 				>
 					<input
@@ -60,7 +89,7 @@ export const LastBanner = () => {
 						onChange={handleChange}
 					/>
 					<button
-						type="button"
+						type="submit"
 						className="rounded-2xl bg-[#133554] px-10 py-2 w-64 xl:w-[80%] sm:w-96 text-white"
 					>
 						CONTACTAME
