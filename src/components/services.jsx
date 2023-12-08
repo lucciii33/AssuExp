@@ -23,12 +23,12 @@ function Services() {
 
 
   const cardData = [
-    { id: 1, text: 'Card 1 Content' },
-    { id: 2, text: 'Card 2 Content' },
-    { id: 3, text: 'Card 3 Content' },
-    { id: 4, text: 'Card 4 Content' },
-    { id: 5, text: 'Card 5 Content' },
-    { id: 6, text: 'Card 6 Content' },
+    { id: 1, title:"here is some description about this therapy maybse some prices?", text: 'Card 1 Content' },
+    { id: 2, title:"here is some description about this therapy maybse some prices?", text: 'Card 2 Content' },
+    { id: 3, title:"here is some description about this therapy maybse some prices?", text: 'Card 3 Content' },
+    { id: 4, title:"here is some description about this therapy maybse some prices?", text: 'Card 4 Content' },
+    { id: 5, title:"here is some description about this therapy maybse some prices?", text: 'Card 5 Content' },
+    { id: 6, title:"here is some description about this therapy maybse some prices?", text: 'Card 6 Content' },
   ];
 
  const duplicated = [...cardData, ...cardData, ...cardData, ...cardData]
@@ -47,7 +47,10 @@ function Services() {
       <div className="cards-wrapper">
         {duplicated.map((card) => (
           <div key={card.id} className="card">
-            {card.text}
+            <div className="">
+            <h2>{card.text}</h2>
+            <p>{card.title}</p>
+            </div>
           </div>
         ))}
       </div>

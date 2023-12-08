@@ -25,21 +25,26 @@
 
 .cards-wrapper {
   display: flex;
-  /* animation: cardAnimation 20s linear infinite;  */
-  white-space: nowrap; /* Prevent cards from wrapping to the next line */}
+}
+
 .cards-wrapper:hover {
   animation-play-state: paused;
 }
 
 .card {
   flex: 0 0 auto;
-  width: 250px; /* Adjust the card width as needed */
-  margin-right: 16px; /* Adjust the margin between cards as needed */
-  padding: 16px; /* Adjust the padding within the cards as needed */
-  background-color: #3c3d3e; /* Set the background color as needed */
+  width: 250px; 
+  margin-right: 16px; 
+  padding: 16px;
+  background-color: #3c3d3e; 
   height: 300px;
   border-radius: 20px;
-  /* transition: transform 0.3s ease, width 0.3s ease; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  text-align: center;
+  color: #ffffff
 }
 /* .card:hover{
   transition: transform 0.3s ease, width 0.3s ease; 
