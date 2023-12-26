@@ -1,9 +1,19 @@
 import { useState } from "react";
 
 import "../styles/home.css";
+import Services from './services'
+import QuienEs from './quienEs'
+import { LastBanner } from './last-banner'
 
 function Home() {
-  const [count, setCount] = useState(0);
+  
+  const redirectToWhatsApp = () => {
+    const phoneNumber = '7864983554';
+    const initialMessage = 'Hola Assunta estoy interesado en una terapia';
+    const encodedMessage = encodeURIComponent(initialMessage);
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappLink, '_blank');
+  };
 
   return (
     <>
@@ -31,12 +41,17 @@ function Home() {
           </div>
           <div className="mt-5 grid justify-items-center md:justify-items-end items-center buttons-rigth">
               <div>
-                <button className="me-4 button-grey">TERAPIAS</button>
-                <button className=" button-blue">RESERVA ONLINE</button>
+                <button className="me-4 button-grey"><a href="#services">TERAPIAS</a></button>
+                <button className=" button-blue" onClick={()=>{
+                  redirectToWhatsApp()
+                }}>RESERVA ONLINE</button>
               </div>
             </div>
         </div>
       </div>
+      <QuienEs />
+			<Services />
+			<LastBanner />
     </>
   );
 }

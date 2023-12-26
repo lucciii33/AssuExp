@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import { Link } from 'react-router-dom';
 
 export const LastBanner = () => {
 	const form = useRef()
@@ -110,12 +111,14 @@ export const LastBanner = () => {
 									expansión de la conciencia y la sanación ha dejado una huella
 									indeleble en la vida de quienes la conocen.
 								</p>
+								<Link to="/podcast">
 								<button
 									type="button"
 									className="rounded-2xl bg-[#3C3D3E] px-10 py-2 text-white text-sm sm:text-lg"
 								>
 									SUSCRIBIRTE
 								</button>
+								</Link>
 							</div>
 						</div>
 					</div>

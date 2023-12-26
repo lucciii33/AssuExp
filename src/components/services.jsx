@@ -35,7 +35,7 @@ function Services() {
 
   return (
     <>
-      <div className="container-services">
+      <div className="container-services" id="services">
         <div className="flex items-center justify-center">
           <div className="pt-20">
             <h1 className="titleServices font-bold">MIS TERAPIAS</h1>

@@ -8,7 +8,7 @@ function QuienEs() {
     <>
       <div className="container-services">
         <div className="flex items-center justify-center sm:text-center">
-          <div className="pt-20 ">
+          <div className="pt-20 text-center">
             <h1 className="titleServices font-extralight">
               QUIEN ES <span className="font-bold">ASSU EN EXPANSIONS</span>
             </h1>
@@ -19,8 +19,8 @@ function QuienEs() {
           {/* Left Div (Text) */}
           <div className="w-full md:w-full lg:w-7/12 px-4 mb-8 md:mb-0">
             <div className=" p-4 md:h-full lg:pt-5 xl:pt-10">
-              <h2 className="text-xl font-bold mb-5">Text Content</h2>
-              <p>
+              <h2 className="text-xl font-bold mb-5 text-center md:text-left">Assunta Di Giuseppe</h2>
+              <p className="text-center md:text-left">
                 SAssunta es una mujer extraordinaria con una profunda conexión
                 con el mundo de la energía y el equilibrio. Con una pasión por
                 el Feng Shui que ha cultivado a lo largo de los años, ha llegado
@@ -28,7 +28,7 @@ function QuienEs() {
                 transformación de vidas.
               </p>
               <br />
-              <p>
+              <p className="text-center md:text-left">
                 Con décadas de experiencia en el mundo del Feng Shui, Assunta ha
                 guiado a innumerables personas hacia la armonía y la prosperidad
                 a través de la sabiduría milenaria de esta antigua práctica
@@ -37,7 +37,7 @@ function QuienEs() {
                 abundancia.
               </p>
               <br />
-              <p>
+              <p className="text-center md:text-left">
                 Con décadas de experiencia en el mundo del Feng Shui, Assunta ha
                 guiado a innumerables personas hacia la armonía y la prosperidad
                 a través de la sabiduría milenaria de esta antigua práctica
